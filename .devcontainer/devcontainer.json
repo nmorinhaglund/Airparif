@@ -1,0 +1,19 @@
+{
+  "name": "R Geospatial Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/r:1": {}
+  },
+  "postCreateCommand": "Rscript -e 'install.packages(c(\"dplyr\", \"ggplot2\", \"sf\", \"arrow\", \"lubridate\", \"jsonlite\", \"osmdata\", \"leaflet\", \"mapedit\", \"stringr\", \"languageserver\", \"IRkernel\")); IRkernel::installspec(user = FALSE)'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "REditorSupport.r",
+        "RDebugger.r-debugger",
+        "Ikuyadeu.r",
+        "ms-toolsai.jupyter",
+        "quarto.quarto"
+      ]
+    }
+  }
+}
