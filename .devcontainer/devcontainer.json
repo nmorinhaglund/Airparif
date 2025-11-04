@@ -2,7 +2,9 @@
   "name": "R Geospatial Environment",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "ghcr.io/devcontainers/features/r:1": {}
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/r:latest": {}
   },
   "postCreateCommand": "Rscript -e 'install.packages(c(\"dplyr\", \"ggplot2\", \"sf\", \"arrow\", \"lubridate\", \"jsonlite\", \"osmdata\", \"leaflet\", \"mapedit\", \"stringr\", \"languageserver\", \"IRkernel\")); IRkernel::installspec(user = FALSE)'",
   "customizations": {
